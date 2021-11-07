@@ -18,8 +18,7 @@ namespace Game
         static DateTime time = DateTime.Now;
         //public static bool start = true;
         static void Main(string[] args)
-        {
-           
+        {           
             RunMainCode();                                  
         }
         public static void RunMainCode()
@@ -225,7 +224,6 @@ namespace Game
         }
         public static void Delete()
         {// file delete
-            Process process = new Process();
             Console.WriteLine("\n============================");
             Console.WriteLine("Enter ID you want to delete");
             Console.WriteLine("Or type 'b' return to main_menu");
@@ -250,7 +248,6 @@ namespace Game
             Console.WriteLine("\nDelete successful!");
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
-            process.Refresh();
             Console.Clear();
             RunMainCode();
 
@@ -345,78 +342,7 @@ namespace Game
                 Console.WriteLine("Press any key to exit...");
             Console.ReadKey();
             Environment.Exit(0);
-        }
-        public void MoveAnimation()  // animation
-        {
-            string head1 = "  o ";
-            string body1 = "--|--";
-            string legs1 = "   / \\";
-            string legs2 = "     | ";
-            string road1 = "=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=";
-            string road2 = "#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#";
-            bool legsShouldPrint = true;
-
-            Console.WriteLine(head1);
-            Console.WriteLine(body1);
-
-            for (int i = 0; i < 35; i++)
-            {
-                Console.Clear();
-                body1 = " " + body1;
-                head1 = " " + head1;
-                Console.WriteLine(" " + head1);
-                Console.WriteLine(" " + body1);
-                if (legsShouldPrint)
-                {
-                    Console.WriteLine(legs1);
-                    Console.WriteLine(road1);
-                    legs1 = "  " + legs1;
-                }
-                else
-                {
-                    Console.WriteLine(legs2);
-                    Console.WriteLine(road2);
-                    legs2 = "  " + legs2;
-                }
-                legsShouldPrint = !legsShouldPrint;
-                Thread.Sleep(20);
-            }
-            
-        }
-        static void Test()
-        {
-            string head = "  0   /";
-            string body_weapon = "--|--/";
-            string head1 = "  0";
-            string body_weapon1 = "--|--====";
-            string leg = " / \\";
-            bool print = false;
-            string projectile = ">";
-
-            Console.WriteLine(head1);
-            Console.WriteLine(body_weapon1);
-            Console.WriteLine(leg);
-            for (int i = 0; i < 35; i++)
-            {                
-                Console.Clear();
-                if (print)
-                {
-                    Console.WriteLine(head);
-                    Console.WriteLine(body_weapon);
-                    Console.WriteLine(leg);
-                }
-                else
-                {
-                    projectile = " " + projectile;
-                    Console.WriteLine(head1);
-                    Console.Write(body_weapon1);
-                    Console.WriteLine(projectile);
-                    Console.WriteLine(leg);                                
-                }                
-                //print = !print;
-                Thread.Sleep(200);
-            }
-        }
+        }        
         void Countdount(int input_m, int input_s)
         {
             Console.Write("enter minute : ");

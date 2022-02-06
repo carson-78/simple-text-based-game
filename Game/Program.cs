@@ -12,14 +12,15 @@ namespace Game
 {
     public class Program
     {
+        // test12345
         public static Random r = new Random();
         public static Player currentPlayer = new Player();
         public static Encounter encounter = new Encounter();
         static DateTime time = DateTime.Now;
         //public static bool start = true;
         static void Main(string[] args)
-        {           
-            RunMainCode();                                  
+        {
+            RunMainCode();           
         }
         public static void RunMainCode()
         {            

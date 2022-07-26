@@ -199,7 +199,6 @@ namespace Game
             }
             if (!boss) // if not boss 
             {
-                SystemSounds.Exclamation.Play();
                 int coins = Program.currentPlayer.GetCoins(0);
                 int exp = Program.currentPlayer.GetExperience(0);
                 Console.WriteLine("==============================================================================================");
@@ -220,7 +219,6 @@ namespace Game
             }
             else if (boss)  // if boss slayed
             {               
-                SystemSounds.Exclamation.Play();
                 int coins = Program.currentPlayer.GetCoins(500);
                 int exp = Program.currentPlayer.GetExperience(200);
                 Console.Clear();

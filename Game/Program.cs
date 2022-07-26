@@ -367,8 +367,7 @@ namespace Game
                     {
                         Console.WriteLine($"{minute}m : {second}s"); Thread.Sleep(1000);
                     }
-                }
-                SystemSounds.Hand.Play();                
+                }               
             }            
         }
         
